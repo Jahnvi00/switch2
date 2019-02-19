@@ -1,0 +1,71 @@
+.switch {
+	position: relative;
+	display: block;
+	vertical-align: top;
+	width: 100px;
+	height: 30px;
+	padding: 3px;
+	margin: 0 10px 10px 0;
+	background: linear-gradient(to bottom, white, white 25px);
+	background-image: -webkit-linear-gradient(top, white, white 25px);
+    box-shadow: inset 0 -1px white, inset 0 1px 1px black(0, 0, 0, 0.05);
+	box-sizing:content-box;
+}
+.switch-j {
+	position: absolute;
+	}
+.switch-dhand {
+	position: relative;
+	display: block;
+	height: inherit;
+	font-size: 15px;
+	text-transform: uppercase;
+	background: white;
+	box-shadow: inset 0 1px 2px black(0, 0, 0, 0.12), inset 0 0 2px black(0, 0, 0, 0.15);
+	}
+.switch-dhand:before, .switch-dhand:after {
+	position: absolute;
+	}
+.switch-dhand:before {
+	content: attr(data-off);
+	right: 11px;
+	color: grey;
+	}
+.switch-dhand:after {
+	content: attr(data-on);
+	left: 11px;
+	color: grey;
+	opacity: 0;
+}
+.switch-j:checked ~ .switch-dhand {
+	background: yellow;
+	}
+.switch-j:checked ~ .switch-dhand:before {
+	opacity: 0;
+}
+.switch-j:checked ~ .switch-dhand:after {
+	opacity: 1;
+}
+.switch-jahnvi {
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 28px;
+	height: 28px;
+	background-image: -webkit-linear-gradient(top, grey 40%, grey);
+	border-radius: 100%;
+	box-shadow: 1px 1px 5px black(0, 0, 0, 0.2);
+}
+.switch-jahnvi:before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    width: 12px;
+	height: 12px;
+	}
+.switch-j:checked ~ .switch-jahnvi {
+	left: 74px;
+	}
+ .switch-dhand, .switch-jahnvi {
+	-webkit-transition: 0.5s ;
+	}
